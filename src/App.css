@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left-input {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* align-items: center; */
+}
+.left-input .input {
+  width: 300px;
+}
+.left-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+.right-side {
 }
 
-.App-link {
-  color: #61dafb;
+.registration-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  border-radius: 20px;
+}
+.form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form input {
+  padding: 10px;
+  width: 300px !important;
+}
+.form input[type="password"] {
+  padding: 10px;
+  width: 300px !important;
+}
+.form label {
+  color: #b4886b;
+  font-weight: bold;
+  display: block;
+}
+label:after {
+  content: ": ";
+}
+@media screen and (max-width: 760px) {
+  .form {
+    width: 100% !important;
   }
-  to {
-    transform: rotate(360deg);
+  .form input {
+    padding: 5px;
+    width: 50%;
+  }
+  .form input[type="password"] {
+    padding: 5px;
+    width: 50%;
   }
 }
