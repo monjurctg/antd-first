@@ -1,6 +1,6 @@
-import { Table, Tag } from "antd";
-import React, { useState } from "react";
-import { useEffect } from "react";
+import {Table, Tag} from "antd";
+import React, {useState} from "react";
+import {useEffect} from "react";
 
 function TablePaginition() {
   const [data, setData] = useState([]);
@@ -38,8 +38,8 @@ function TablePaginition() {
         );
       },
       filters: [
-        { text: "Complete", value: true },
-        { text: "In Progress", value: false },
+        {text: "Complete", value: true},
+        {text: "In Progress", value: false},
       ],
       onFilter: (value, record) => {
         return record.completed === value;
@@ -58,12 +58,12 @@ function TablePaginition() {
       });
   }, []);
   return (
-    <div style={{ marginTop: "40px" }}>
+    <div style={{marginTop: "40px"}}>
       <Table
         columns={columns}
         dataSource={data}
         loading={loading}
-        pagination={false}
+        pagination={true}
         rowSelection={true}
       />
     </div>
